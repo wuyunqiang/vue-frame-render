@@ -4,11 +4,11 @@ import commonjs from "rollup-plugin-commonjs";
 import resolve from "rollup-plugin-node-resolve";
 import { terser } from "rollup-plugin-terser"; // js压缩
 import typescript from "rollup-plugin-typescript2";
-import visualizer from "rollup-plugin-visualizer";
+import { visualizer } from "rollup-plugin-visualizer";
 import vue from "rollup-plugin-vue";
+import { readFileSync } from "fs";
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const PKG_JSON = require(join(__dirname, "package.json"));
+const PKG_JSON = JSON.parse(readFileSync("package.json", { encoding: "utf8" }));
 
 export default defineConfig([
   {

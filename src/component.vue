@@ -3,7 +3,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "@vue/composition-api";
-import { useFrameRender } from "./useFrameRender";
+import { useFrameRender } from "./useFrameRender.js";
 export default defineComponent({
   name: "vue-frame-render",
   props: {

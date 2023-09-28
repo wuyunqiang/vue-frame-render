@@ -2,7 +2,7 @@
     <slot v-if="nextFrame"></slot>
 </template>
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent } from "vue";
 import { useFrameRender } from "./useFrameRender.js";
 export default defineComponent({
   name: "vue-frame-render",

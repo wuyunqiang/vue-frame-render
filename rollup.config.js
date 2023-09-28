@@ -1,5 +1,4 @@
 import { defineConfig } from "rollup";
-import { join } from "path";
 import commonjs from "rollup-plugin-commonjs";
 import resolve from "rollup-plugin-node-resolve";
 import { terser } from "rollup-plugin-terser"; // js压缩
@@ -33,13 +32,14 @@ export default defineConfig([
     ],
     plugins: [
       resolve({ browser: true, extensions: [".vue"] }),
+      vue({ css: false}),
       commonjs(),
       typescript({
         clean: true,
         tsconfig: "tsconfig.json",
         rollupCommonJSResolveHack: false,
       }),
-      vue({ css: true, compileTemplate: true }),
+      
       terser(),
       visualizer(),
     ],

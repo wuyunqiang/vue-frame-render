@@ -30,5 +30,8 @@
     "vue": "^3.3.4",
     "vue-tsc": "^1.8.15"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "files": [
+    "dist"
+  ]
 }
